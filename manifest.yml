@@ -1,0 +1,23 @@
+modules:
+  jira:dashboardGadget:
+    - key: worklogreport-hello-world-gadget
+      title: worklogReport
+      description: A hello world dashboard gadget.
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: main
+      resolver:
+        function: resolver
+      edit:
+        resource: main
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+app:
+  id: ari:cloud:ecosystem::app/d992702b-5c1e-4734-9e15-02d14abff7d6
